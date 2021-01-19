@@ -61,15 +61,11 @@ namespace BookShop.Controllers
 
             if (_context != null)
             {
-                //Find the post for specific post id
                 var book = await _context.Books.FirstOrDefaultAsync(x => x.Id == id);
 
                 if (book != null)
                 {
-                    //Delete that post
                     _context.Books.Remove(book);
-
-                    //Commit the transaction
                     result = await _context.SaveChangesAsync();
                 }
                 return result;
@@ -83,10 +79,8 @@ namespace BookShop.Controllers
         {
             if (_context != null)
             {
-                //Delete that post
                 _context.Books.Update(book);
 
-                //Commit the transaction
                 await _context.SaveChangesAsync();
             }
         }
