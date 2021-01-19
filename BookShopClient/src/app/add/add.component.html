@@ -1,0 +1,33 @@
+<form #addForm="ngForm" (ngSubmit)="add()" autocomplete="off">
+    <h2 class="text-center test-primary">Add New</h2>
+    <hr>
+    <div class="form-group">
+        <input type="text" class="form-control" name="author" 
+            [(ngModel)]="model.author" placeholder="Author">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="title" 
+            [(ngModel)]="model.title" placeholder="Title">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="description" 
+            [(ngModel)]="model.description" placeholder="Description">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="category" 
+            [(ngModel)]="model.category" placeholder="Category">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="genre" 
+            [(ngModel)]="model.genre" placeholder="Genre">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="bookcode" 
+            [(ngModel)]="model.bookCode" placeholder="Book Code">
+    </div>
+    <div class="form-group" text-center>
+        <button class="btn btn-success mr-2" type="submit"></button>        
+        <button class="btn btn-success mr-2" type="button" (click)="cancel()"></button>
+
+    </div>
+</form>
