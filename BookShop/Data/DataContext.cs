@@ -10,5 +10,7 @@ namespace BookShop.Data
         }
 
         public DbSet<Book> Books { get; set; }
+
+        public DbSet<AppUser> Users { get; set; }
     }
 }
